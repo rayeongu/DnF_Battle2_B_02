@@ -86,7 +86,9 @@
                 <p>- 기본 HP : <%= character.getHP() %></p>
                 <p>- 기본 공격력 : <%= character.get공격력() %></p>
                 
-                <a href="Attack_Monster_UI.jsp" class="btn-link">> [전투 시뮬레이션 이동] 몬스터 공격하기</a>
+                <a href="Attack_Monster_UI.jsp" class="btn-link">> [전투 시뮬레이션 이동] 몬스터 공격하기</a><br>
+				<a href="Add_Item_UI.jsp" class="btn-link">> [아이템 시스템 이동] 아이템 획득하기</a><br>
+				<a href="Join_Guild_UI.jsp" class="btn-link">> [길드 시스템 이동] 길드 가입하기</a>
             <% } else { %>
                 <hr style="border: 0; border-top: 1px solid #30363d; margin: 15px 0;">
                 <p style="color: #f85149;"><strong>▶ 플레이어 생성 실패 (플레이어 ID가 'hero'인지 확인하세요)</strong></p>

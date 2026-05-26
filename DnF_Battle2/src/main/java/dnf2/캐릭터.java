@@ -5,6 +5,11 @@ public abstract class 캐릭터 {
 	protected int 레벨;
 	protected int HP;
 	protected int 공격력;
+	protected 인벤토리 inventory;
+
+	public 캐릭터() {
+		this.inventory = new 인벤토리();
+	}
 
 	public abstract int 스킬발동();
 
@@ -24,5 +29,9 @@ public abstract class 캐릭터 {
 
 	public int get공격력() {
 		return 공격력;
+	}
+
+	public 인벤토리 get인벤토리() {
+		return inventory;
 	}
 }
