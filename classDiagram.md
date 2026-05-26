@@ -1,5 +1,21 @@
 ```mermaid
 classDiagram
+    class Create_Character_UI {
+        <<boundary>>
+    }
+
+    class Attack_Monster_UI {
+        <<boundary>>
+    }
+
+    class Add_Item_UI {
+        <<boundary>>
+    }
+
+    class Join_Guild_UI {
+        <<boundary>>
+    }
+
     class 캐릭터 {
         <<abstract>>
         #캐릭터명 : String
@@ -63,6 +79,11 @@ classDiagram
     전투 ..> 캐릭터 : 의존
     전투 ..> 전사 : 의존
     전투 ..> 마법사 : 의존
+
+    Create_Character_UI --|> 전투 : 상속 (Generalization)
+    Attack_Monster_UI --|> 전투 : 상속 (Generalization)
+    Add_Item_UI --|> 전투 : 상속 (Generalization)
+    Join_Guild_UI --|> 전투 : 상속 (Generalization)
 
     캐릭터 "1" *-- "1" 인벤토리 : 합성 (Composition)
     인벤토리 "1" *-- "0..*" 아이템 : 합성 (Composition)
