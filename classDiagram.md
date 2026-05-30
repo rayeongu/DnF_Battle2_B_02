@@ -17,18 +17,21 @@ classDiagram
     }
 
     class 캐릭터 {
-        <<abstract>>
-        #캐릭터명 : String
-        #레벨 : int
-        #HP : int
-        #공격력 : int
-        +스킬발동()* int
-        +get스킬명()* String
-        +get캐릭터명() String
-        +get레벨() int
-        +getHP() int
-        +get공격력() int
-    }
+		<<abstract>>
+		#캐릭터명: String
+		#레벨: int
+		#HP: int
+		#공격력: int
+		#inventory: 인벤토리
+		+캐릭터() void
+		+스킬발동()* int
+		+get스킬명()* String
+		+get캐릭터명() String
+		+get레벨() int
+		+getHP() int
+		+get공격력() int
+		+get인벤토리() 인벤토리
+	}
 
     class 전사 {
         +전사(캐릭터명: String, 레벨: int) void
