@@ -52,24 +52,34 @@ classDiagram
     }
 
     class 아이템 {
-        -아이템명 : String
-        -타입 : String
-        -가치 : int
-        -등급 : String
-    }
+		-아이템명: String
+		-타입: String
+		-가치: int
+		-등급: String
+		+아이템(아이템명: String, 타입: String, 가치: int) void
+		+get아이템명() String
+		+get타입() String
+		+get가치() int
+		+get등급() String
+	}
 
     class 인벤토리 {
-        -아이템리스트 : List
-        -최대용량 : int
-        +아이템추가(item: 아이템) boolean
-    }
+		-아이템리스트: List
+		-최대용량: int
+		+인벤토리() void
+		+아이템추가(item: 아이템) boolean
+		+get아이템리스트() List
+	}
 
     class 길드 {
-        -길드명 : String
-        -캐릭터리스트 : List
-        -최대인원 : int
-        +캐릭터가입(character: 캐릭터) boolean
-    }
+		-길드명: String
+		-캐릭터리스트: List
+		-최대인원: int
+		+길드(길드명: String) void
+		+캐릭터가입(character: 캐릭터) String
+		+get길드명() String
+		+get현재인원() int
+	}
 
     %% 관계 정의
     전사 --|> 캐릭터 : 상속
