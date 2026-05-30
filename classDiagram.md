@@ -31,13 +31,13 @@ classDiagram
     }
 
     class 전사 {
-        +전사(캐릭터명: String, 레벨: int)
+        +전사(캐릭터명: String, 레벨: int) void
         +스킬발동() int
         +get스킬명() String
     }
 
     class 마법사 {
-        +마법사(캐릭터명: String, 레벨: int)
+        +마법사(캐릭터명: String, 레벨: int) void
         +스킬발동() int
         +get스킬명() String
     }
