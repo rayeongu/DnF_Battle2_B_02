@@ -47,9 +47,11 @@ classDiagram
     }
 
     class 전투 {
-        +캐릭터생성(플레이어id: String, 캐릭터명: String, 직업: String, 레벨: int) 캐릭터
-        +몬스터공격(플레이어id: String, character: 캐릭터) String
-    }
+		+캐릭터생성(플레이어id: String, 캐릭터명: String, 직업: String, 레벨: int) 캐릭터
+		+몬스터공격(플레이어id: String, character: 캐릭터) String
+		+아이템획득(플레이어id: String, character: 캐릭터, 아이템명: String, 타입: String, 가치: int) String
+		+길드가입(플레이어id: String, guild: 길드, character: 캐릭터) String
+	}
 
     class 아이템 {
 		-아이템명: String
