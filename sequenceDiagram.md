@@ -2,10 +2,10 @@
 sequenceDiagram
     autonumber
     actor Player as 플레이어 (브라우저)
-    participant UI_Create as Create_Character_UI
-    participant UI_Attack as Attack_Monster_UI
-    participant UI_Item as Add_Item_UI
-    participant UI_Guild as Join_Guild_UI
+    participant UI_Create as <<boundary>><br/>Create_Character_UI
+    participant UI_Attack as <<boundary>><br/>Attack_Monster_UI
+    participant UI_Item as <<boundary>><br/>Add_Item_UI
+    participant UI_Guild as <<boundary>><br/>Join_Guild_UI
     participant Session as Session (세션)
     participant Battle as 전투 (Class)
     participant Model as 캐릭터/전사/마법사 (Class)
