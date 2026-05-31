@@ -21,51 +21,55 @@ classDiagram
     }
 
     %% Control Class (컨트롤 클래스)
-    class 전투 {
-        <<control, utility>>
-        +캐릭터생성(id, 이름, 직업, 레벨) static String
-        +몬스터공격(id, c) static String
-        +아이템획득(pId, c, 명, 타입, 가치) static String
-        +길드가입(id, g, c) static String
-    }
-
-    %% Domain Entity Classes (엔티티 클래스)
-    class 플레이어 {
-        +플레이어체크(id: String) static boolean
+       class 플레이어 {
+        +플레이어체크(id: String) boolean
     }
 
     class 캐릭터 {
         <<abstract>>
-        +String 캐릭터명
-        +int 레벨
-        +int HP
-        +int 공격력
-        +인벤토리 인벤토리
+        +캐릭터명: String
+        +레벨: int
+        +HP: int
+        +공격력: int
+        +인벤토리: 인벤토리
         +스킬발동()* String
         +get데미지()* double
     }
 
-    class 전사 { +스킬발동() String }
-    class 마법사 { +스킬발동() String }
+    class 전사 {
+        +스킬발동() String
+        +get데미지() double
+    }
+
+    class 마법사 {
+        +스킬발동() String
+        +get데미지() double
+    }
 
     class 인벤토리 {
-        +List~아이템~ 아이템리스트
-        +int 최대용량 = 10
+        +아이템리스트: List~아이템~
+        +최대용량: int
         +아이템추가(item: 아이템) boolean
     }
 
     class 아이템 {
-        +String 아이템명
-        +String 아이템타입
-        +int 가치
-        +String 등급
+        +아이템명: String
+        +아이템타입: String
+        +가치: int
+        +등급: String
+        -결정등급(가치: int) String
     }
 
     class 길드 {
-        +String 길드명
-        +List~캐릭터~ 캐릭터리스트
-        +int 최대인원 = 5
+        +길드명: String
+        +캐릭터리스트: List~캐릭터~
+        +최대인원: int
         +캐릭터가입(c: 캐릭터) String
+    }
+
+    class 전투 {
+        +캐릭터생성(id, 이름, 직업, 레벨) String
+        +몬스터공격(id, c) String
     }
 
     %% --- 관계 설정 ---
